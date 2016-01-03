@@ -63,7 +63,7 @@ void insertSort(int a[],int length)
     for (int i = 1;i < length;i++)
     {
         int key = a[i];
-        for (int j = i - 1;j > 0;j--)
+        for (int j = i - 1;j >= 0;j--)
         {
             if (a[j] > key)
             {
