@@ -16,7 +16,7 @@ bool isPowerOfTwo(int n)
         return  true;
     }
     if (fmod(log2(n), 1) == 0.0) {
-        // 通过对概述开方运算之后再乘以2是否仍旧该数来判断
+        // 对以2求对数之后的结果进行对1浮点数求余来判断是否为2的幂
         cout<<"true"<<endl;
         return true;
     }
