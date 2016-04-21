@@ -8,6 +8,7 @@
 
 #include <iostream>
 using namespace std;
+
 struct Node{
     int  data;
     Node* pNext;//  节点指针
