@@ -26,6 +26,6 @@ bool isPowerOfTwo(int n)
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    isPowerOfTwo(15);
+    isPowerOfTwo(56);
     return 0;
 }
