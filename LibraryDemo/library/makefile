@@ -5,3 +5,4 @@ sharedlib: myclass.cpp myclass.h hello.h hello.cpp
 	g++ -fPIC -shared hello.cpp -o libHello.so
 clean:
 	-rm *.out *.so *.a
+	-rm cmake_install.cmake CMakeCache.txt
