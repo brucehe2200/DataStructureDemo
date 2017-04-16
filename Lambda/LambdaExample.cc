@@ -4,6 +4,14 @@
 using namespace std;
 int main(){
     for(int i =0;i < 10;i++){
+	  /*
+	   * [] do not capture value or reference
+	   * [=] capture the variable by value
+	   * [&] capture the variable by reference
+	   * [x,&y] capture the x by value,capture the y by reference
+	   * [=,&z] capture the z by reference, capture other variables by value
+	   * [&,x] capture the x by value,capture others by reference
+	   * */
 	  auto func = [=](){return i*(i+1);};
 	  cout<<func()<<endl;
 	}
