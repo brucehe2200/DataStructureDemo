@@ -37,6 +37,6 @@ string longestPalindrome(string s) {
   int main()
 {
     string temp = "ccdsdfgfhgjhj";
-    longestPalindrome(temp);
+    cout<<longestPalindrome(temp)<<endl;
     return 0;
 }
