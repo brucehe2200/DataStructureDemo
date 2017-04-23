@@ -15,7 +15,7 @@ int swap(int *a,int *b)
     return 1;
 }
 /**
-*\brief  Ñ¡ÔñÅÅÐò
+*\brief  é€‰æ‹©æŽ’åº
 *\param[in]
 *\return
 */
@@ -36,7 +36,7 @@ void selectSort(int a[],int length)
     }
 }
 /**
-*\brief  Ã°ÅÝÅÅÐò
+*\brief  å†’æ³¡æŽ’åº
 *\param[in]
 *\return
 */
@@ -54,7 +54,7 @@ void bubbleSort(int a[],int length)
     }
 }
 /**
-*\brief  ²åÈëÅÅÐò
+*\brief  æ’å…¥æŽ’åº
 *\param[in]
 *\return
 */
@@ -75,40 +75,35 @@ void insertSort(int a[],int length)
     }
 }
 /**
-*\brief  ¿ìËÙÅÅÐò
+*\brief  å¿«é€ŸæŽ’åº
 *\param[in]
 *\return
 */
 void quickSort(int a[],int left,int right)
 {
-    int low = left;
+     int low = left;
     int high = right;
-    int key = a[right];
+    int key = a[low];//first, we set the key value is the a[low]
     if (left >= right)
     {
-        return ;
+        return;
     }
-    while(low < high)
+    while (low < high)
     {
-        while(a[high] >= key && high > low)
+        while (a[high] >= key && high > low)// find the value less than the key
         {
             high--;
         }
-        while(a[low] <= key && low < high)
+        if (low < high) { a[low] = a[high]; }// set it into a[low]
+        while (a[low] < key && low < high)// find the value greater than the key
         {
             low++;
         }
-        if(low < high)
-        {
-            swap(&a[low],&a[high]);
-        }
+        if (low < high) { a[high] = a[low]; }// get it and set the value into a[high]
     }
-    if (a[low] > key)
-    {// ´ËÊ±Á½¸ö±ê¼ÆÁ¿ÒÑ¾­ÖØµþ
-        swap(&a[low],&a[right]);
-    }
-    quickSort(a,left,low - 1);
-    quickSort(a,high + 1,right);
+    a[low] = key;// when we end the loop, we have found the key value it should be into.
+    quickSort(a, left, low - 1);
+    quickSort(a, low + 1, right);
 }
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -125,7 +120,7 @@ int _tmain(int argc, _TCHAR* argv[])
     {
         cout<<tempArr[i]<<endl;
     }
-    cout<<"ÔËÐÐÊ±¼äÎª:"<<GetTickCount() - timestart<<endl;
+    cout<<"è¿è¡Œæ—¶é—´ä¸º:"<<GetTickCount() - timestart<<endl;
     return 0;
 }
 
