@@ -7,7 +7,7 @@ bool isPalindrome(int x) {
     int temp = x;
     while (x>0)
     {
-        sum = sum * 10 + x % 10;
+        sum = sum * 10 + x % 10;// we just get the reverse value, then we judge wheather it equal with x.
         x = x / 10;
     }
     return (temp == sum);
