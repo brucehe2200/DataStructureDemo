@@ -25,8 +25,9 @@ void backtrack(vector<int>& nums, int beginIndex,vector<vector<int>> &result) {
       for(int i = 0;i < resultList.size();i++){
         for(int j = 0;j < resultList[i].size();j++){
           cout<<resultList[i][j];
-          if(j < resultList.size() -1){cout<<"-->"<<endl;}
+          if(j < resultList.size() -1){cout<<"-->"}
         }
+          cout<<endl;
       }
       return 1;
     }
